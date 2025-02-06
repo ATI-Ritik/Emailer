@@ -9,8 +9,8 @@ const transporter = nodemailer.createTransport({
   port: 587,
   secure: false, // true for port 465, false for other ports
   auth: {
-    user: process.env.SMTPUSERNAME,
-    pass: process.env.SMTPPASSWORD,
+    user: process.env.SMTP_USERNAME,
+    pass: process.env.SMTP_PASSWORD,
   },
 });
 
@@ -35,8 +35,8 @@ async function main() {
   const text = await askQuestion("Enter the text of the mail: ");
 
   const info = await transporter.sendMail({
-    from: '"Ritik" <ritik@ethercorps.io>', // sender address
-    to: "kumarritik262@gmail.com", // list of receivers
+    from: `"Ritik" <${process.env.SENDER_EMAIL}> `, // sender address
+    to: process.env.RECEIVER_EMAIL, // list of receivers
     subject: subject, // Subject line
     text: text, // plain text body
     // html: "<b>Hello world?</b>", // html body
