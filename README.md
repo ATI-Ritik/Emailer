@@ -1,8 +1,3 @@
-## TODO
-
-- Take subject and message body and sender as input then send mail.
-- If possible to take mail id as input (IFF prod) - X
-
 # Documentation
 
 ## What is AWS SES
