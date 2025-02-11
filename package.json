@@ -11,7 +11,12 @@
   "license": "ISC",
   "type": "module",
   "dependencies": {
+    "aws4fetch": "^1.0.20",
+    "crypto": "^1.0.1",
+    "crypto-js": "^4.2.0",
     "dotenv": "^16.4.7",
+    "fast-xml-parser": "^4.5.1",
+    "node-fetch": "^3.3.2",
     "nodemailer": "^6.10.0"
   }
 }

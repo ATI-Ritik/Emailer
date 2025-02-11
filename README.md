@@ -148,3 +148,15 @@ In most cases, your messages are delivered successfully to recipients who expect
   - To understand more about the account-level suppression list, see [Using the Amazon SES account-level suppression list.](https://docs.aws.amazon.com/ses/latest/dg/sending-email-suppression-list.html)
 
 ---
+
+## SigV4 signing process.
+
+### Signing requests involves:
+
+1. Creating a canonical request based on the request details.
+
+2. Calculating a signature using your AWS credentials.
+
+3. Adding this signature to the request as an Authorization header.
+
+AWS then replicates this process and verifies the signature, granting or denying access accordingly.
